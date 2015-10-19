@@ -1,0 +1,21 @@
+accounting-common-max-percent:
+   variables:
+      target: $target
+   operations:
+      1:
+         type: int-size
+         variables:
+            target: $target
+            min-size: 0
+            max-size: 100
+
+accounting-common-quarter-size:
+   variables:
+      target: $target
+   operations:
+      1:
+         type: int-size
+         variables:
+            target: $target
+            min-size: 1
+            max-size: 4

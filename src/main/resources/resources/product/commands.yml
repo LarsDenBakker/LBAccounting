@@ -1,0 +1,71 @@
+commands:
+   products:
+      templates:
+      - registry-commmands-all-info
+      - registry-commmands-info
+      - registry-commmands-delete
+      - registry-commmands-create-1
+      template-variables:
+         registry: .products
+         registrable: product
+         constructor-argument-1: name
+      sub-commands:
+         name:
+            templates:
+            - property-value-commands-set
+            - property-value-commands-clear
+            template-variables:
+               registry: .products
+               registrable: product
+               argument: name
+               property: name
+         category:
+            templates:
+            - property-value-commands-set
+            - property-value-commands-clear
+            template-variables:
+               registry: .products
+               registrable: product
+               argument: category
+               property: category         
+         price:
+            templates:
+            - property-value-commands-set
+            - property-value-commands-add
+            - property-value-commands-remove            
+            - property-value-commands-clear
+            template-variables:
+               registry: .products
+               registrable: product
+               argument: price
+               property: price
+
+   product-categories:
+      templates:
+      - registry-commmands-all-info
+      - registry-commmands-info
+      - registry-commmands-delete
+      - registry-commmands-create-1
+      template-variables:
+         registry: .product-categories
+         registrable: product-category
+         constructor-argument-1: name
+      sub-commands:
+         name:
+            templates:
+            - property-value-commands-set
+            - property-value-commands-clear
+            template-variables:
+               registry: .product-categories
+               registrable: product-category
+               argument: name
+               property: name
+         tax-category:
+            templates:
+            - property-value-commands-set
+            - property-value-commands-clear
+            template-variables:
+               registry: .product-categories
+               registrable: product-category
+               argument: tax-category
+               property: tax-category

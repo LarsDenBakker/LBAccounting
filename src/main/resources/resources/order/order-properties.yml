@@ -1,0 +1,9 @@
+properties:
+   index:
+      nullable: false
+      constructor-parameter: true
+   category:
+      default-value: .order-categories.uncategorized
+   quarter:
+      constraint-operations:
+      - accounting-common-quarter-size

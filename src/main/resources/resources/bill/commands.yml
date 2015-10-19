@@ -1,0 +1,108 @@
+commands:
+   payment-sources:
+      templates:
+      - registry-commmands-all-info
+      - registry-commmands-info
+      - registry-commmands-delete
+      - registry-commmands-create-1
+      template-variables:
+         registry: .payment-sources
+         registrable: payment-source
+         constructor-argument-1: name
+      sub-commands:
+         name:
+            templates:
+            - property-value-commands-set
+            - property-value-commands-clear
+            template-variables:
+               registry: .payment-sources
+               registrable: payment-source  
+               argument: name
+               property: name
+               
+   bill-categories:
+      templates:
+      - registry-commmands-all-info
+      - registry-commmands-info
+      - registry-commmands-delete
+      - registry-commmands-create-1
+      template-variables:
+         registry: .bill-categories
+         registrable: bill-category
+         constructor-argument-1: name
+      sub-commands:
+         name:
+            templates:
+            - property-value-commands-set
+            - property-value-commands-clear
+            template-variables:
+               registry: .bill-categories
+               registrable: bill-category 
+               argument: name
+               property: name
+         substractable:
+            templates:
+            - property-value-commands-set
+            - property-value-commands-clear
+            template-variables:
+               registry: .bill-categories
+               registrable: bill-category 
+               argument: substractable
+               property: substractable  
+               
+   bills:
+      templates:
+      - registry-commmands-all-info
+      - registry-commmands-info
+      - registry-commmands-delete
+      - registry-commmands-create-0
+      template-variables:
+         registry: .bills
+         registrable: bills
+      sub-commands:
+         description:
+            templates:
+            - property-value-commands-set
+            - property-value-commands-add            
+            - property-value-commands-clear
+            template-variables:
+               registry: .bills
+               registrable: bills
+               argument: description
+               property: description
+         amount:
+            templates:
+            - property-value-commands-add
+            - property-value-commands-clear
+            template-variables:
+               registry: .bills
+               registrable: bills
+               argument: amount
+               property: amount  
+         paid-date:
+            templates:
+            - property-value-commands-set
+            - property-value-commands-clear
+            template-variables:
+               registry: .bills
+               registrable: bills
+               argument: paid-date
+               property: paid-date  
+         category:
+            templates:
+            - property-value-commands-set
+            - property-value-commands-clear
+            template-variables:
+               registry: .bills
+               registrable: bills
+               argument: category
+               property: category                
+         quarter:
+            templates:
+            - property-value-commands-set
+            - property-value-commands-clear
+            template-variables:
+               registry: .bills
+               registrable: bills
+               argument: quarter
+               property: quarter

@@ -1,0 +1,11 @@
+properties:
+   uuid:
+      auto-generate: true
+   name:
+      nullable: false
+      constructor-parameter: true
+   amount:
+      default-value: 0
+      constraint-operations:
+      - accounting-common-max-percent
+         

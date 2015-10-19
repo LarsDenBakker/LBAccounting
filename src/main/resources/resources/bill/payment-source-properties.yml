@@ -1,0 +1,6 @@
+properties:
+   uuid:
+      auto-generate: true
+   name:
+      nullable: false
+      constructor-parameter: true

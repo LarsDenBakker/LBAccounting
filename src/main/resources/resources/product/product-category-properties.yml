@@ -1,0 +1,8 @@
+properties:
+   uuid:
+      auto-generate: true
+   name:
+      nullable: false
+      constructor-parameter: true
+   tax-category:
+      default-value: .tax-categories.uncategorized

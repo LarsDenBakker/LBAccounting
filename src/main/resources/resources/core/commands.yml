@@ -1,0 +1,32 @@
+commands:
+   tax-categories:
+      templates:
+      - registry-commmands-all-info
+      - registry-commmands-info
+      - registry-commmands-delete
+      - registry-commmands-create-1
+      template-variables:
+         registry: .tax-categories
+         registrable: tax-category
+         constructor-argument-1: name
+      sub-commands:
+         name:
+            templates:
+            - property-value-commands-set
+            - property-value-commands-clear
+            template-variables:
+               registry: .tax-categories
+               registrable: tax-category  
+               argument: name
+               property: name
+         amount:
+            templates:
+            - property-value-commands-set
+            - property-value-commands-clear
+            template-variables:
+               registry: .tax-categories
+               registrable: tax-category  
+               argument: amount
+               property: amount         
+
+       

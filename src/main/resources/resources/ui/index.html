@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <script src="js/bootstrap.min.js"></script>
+      <script>
+         function recordToFilename() {
+            var input = document.getElementById('filename'),
+                    fileName = input.value;
+            if (fileName) {
+               alert('Recording: ' + fileName);
+               // Recorder.record('audio', fileName);
+            } else {
+               alert('Please enter a filename!');
+               input.focus();
+            }
+         }
+         function printToDocument() {
+            var input = document.getElementById('filename'),
+                    fileName = input.value;
+            if (fileName) {
+               document.write(fileName);
+               // Recorder.record('audio', fileName);
+            } else {
+               input.focus();
+            }
+         }
+         function write(toWrite) {
+            document.writeln(toWrite);
+         }
+      </script>
+
+   </head>
+
+   <body>
+      <label for="filename">Filename</label>
+      <input name="filename" id="filename" type="text">
+
+
+      <a id="record_button" onclick="app.wa()" href="javascript:void(0);" title="Record">Record</a>   
+<br/><br/><br/>
+<br/><br/><br/>
+<br/><br/><br/>
+<br/><br/><br/>
+<br/><br/><br/>
+<br/><br/><br/>
+<br/><br/><br/>
+<br/><br/><br/>
+<br/><br/><br/>
+<br/><br/><br/>
+<br/><br/><br/>
+<br/><br/><br/>
+<br/><br/><br/>
+<br/><br/><br/>
+<br/><br/><br/>
+<br/><br/><br/>
+<br/><br/><br/>
+<br/><br/><br/>
+<br/><br/><br/>
+<br/><br/><br/>
+<br/><br/><br/>
+<br/><br/><br/>
+<br/><br/><br/>
+
+   </body>
+</html>

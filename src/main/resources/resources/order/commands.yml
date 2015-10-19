@@ -1,0 +1,127 @@
+commands:
+   orders:
+      templates:
+      - registry-commmands-all-info
+      - registry-commmands-info
+      - registry-commmands-delete
+      - registry-commmands-create-1
+      template-variables:
+         registry: .orders
+         registrable: orders
+         constructor-argument-1: index
+      sub-commands:
+         name:
+            templates:
+            - property-value-commands-set
+            - property-value-commands-clear
+            template-variables:
+               registry: .orders
+               registrable: order
+               argument: name
+               property: name
+         category:
+            templates:
+            - property-value-commands-set
+            - property-value-commands-clear
+            template-variables:
+               registry: .orders
+               registrable: order
+               argument: category
+               property: category         
+         customer:
+            templates:
+            - property-value-commands-set
+            - property-value-commands-clear
+            template-variables:
+               registry: .orders
+               registrable: order
+               argument: customer
+               property: customer
+         description:
+            templates:
+            - property-value-commands-set
+            - property-value-commands-add
+            - property-value-commands-clear
+            template-variables:
+               registry: .orders
+               registrable: order
+               argument: description
+               property: description
+         products:
+            templates:
+            - property-value-commands-add            
+            - property-value-commands-clear
+            template-variables:
+               registry: .orders
+               registrable: order
+               argument: products
+               property: products
+         invoice-date:
+            templates:
+            - property-value-commands-set
+            - property-value-commands-clear
+            template-variables:
+               registry: .orders
+               registrable: order
+               argument: invoice-date
+               property: invoice-date
+         paid-date:
+            templates:
+            - property-value-commands-set
+            - property-value-commands-clear
+            template-variables:
+               registry: .orders
+               registrable: order
+               argument: paid-date
+               property: paid-date
+         quarter:
+            templates:
+            - property-value-commands-set
+            - property-value-commands-clear
+            template-variables:
+               registry: .orders
+               registrable: order
+               argument: quarter
+               property: quarter
+
+   order-categories:
+      templates:
+      - registry-commmands-all-info
+      - registry-commmands-info
+      - registry-commmands-delete
+      - registry-commmands-create-1
+      template-variables:
+         registry: .order-categories
+         registrable: order-category
+         constructor-argument-1: name
+      sub-commands:
+         name:
+            templates:
+            - property-value-commands-set
+            - property-value-commands-clear
+            template-variables:
+               registry: .order-categories
+               registrable: order-category
+               argument: name
+               property: name
+               
+   customers:
+      templates:
+      - registry-commmands-all-info
+      - registry-commmands-info
+      - registry-commmands-delete
+      - registry-commmands-create-1
+      template-variables:
+         registry: .customers
+         registrable: customer
+         constructor-argument-1: name
+      sub-commands:
+         name:
+            templates:
+            - property-value-commands-set
+            - property-value-commands-clear
+            template-variables:
+               registry: .customers
+               registrable: customer
+               argument: name
+               property: name
