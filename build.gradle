@@ -14,7 +14,7 @@ if (!hasProperty('mainClass')) {
 }
 
 dependencies {
-   compile project(':LBApplicationTools')
+   compile project(':LBApplication')
    compile project(':LBCoreModules')
    compile project(':LBUtils')
    compile project(':LBGUIModule')
