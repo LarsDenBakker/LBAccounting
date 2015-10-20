@@ -27,7 +27,7 @@ public class CoreModule extends AbstractModule {
    @Override
    protected void _load() throws UserInputException {
       OperationFactory.registerProcedures(this, getOperationModule(), "operations.yml");
-      CommandFactory.registerCommands(this, getOperationModule(), "commands.yml");
+      CommandFactory.createAndRegisterCommands(this, getOperationModule(), "commands.yml");
 
       taxCategoryRegistry = TaxCategoryRegistry.createAndInitializeRegistry(this);
    }

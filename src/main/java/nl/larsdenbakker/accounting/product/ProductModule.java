@@ -26,7 +26,7 @@ public class ProductModule extends AbstractModule {
 
    @Override
    protected void _load() throws UserInputException {
-      CommandFactory.registerCommands(this, getOperationModule(), "commands.yml");
+      CommandFactory.createAndRegisterCommands(this, getOperationModule(), "commands.yml");
 
       productCategoryRegistry = ProductCategoryRegistry.createAndInitializeRegistry(this);
       productRegistry = ProductRegistry.createAndInitializeRegistry(this);

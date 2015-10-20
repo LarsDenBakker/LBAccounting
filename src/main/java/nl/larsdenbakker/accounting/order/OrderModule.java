@@ -31,7 +31,7 @@ public class OrderModule extends AbstractModule {
 
    @Override
    protected void _load() throws UserInputException {
-      CommandFactory.registerCommands(this, getOperationModule(), "commands.yml");
+      CommandFactory.createAndRegisterCommands(this, getOperationModule(), "commands.yml");
 
       orderCategoryRegistry = OrderCategoryRegistry.createAndInitializeRegistry(this);
       orderRegistry = OrderRegistry.createAndInitializeRegistry(this);

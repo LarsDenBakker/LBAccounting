@@ -28,7 +28,7 @@ public class BillModule extends AbstractModule {
 
    @Override
    protected void _load() throws UserInputException {
-      CommandFactory.registerCommands(this, getOperationModule(), "commands.yml");
+      CommandFactory.createAndRegisterCommands(this, getOperationModule(), "commands.yml");
 
       paymentSourceRegistry = PaymentSourceRegistry.createAndInitializeRegistry(this);
       billCategoryRegistry = BillCategoryRegistry.createAndInitializeRegistry(this);
